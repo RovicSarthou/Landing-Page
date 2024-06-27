@@ -1,0 +1,114 @@
+.navbar {
+    background: white;
+    height: 80px;
+    margin: 30px;
+    border-radius: 50px;
+    width: 60%;
+    margin-left: 20%;
+    margin-right: 0;
+    z-index: 1000; /* Ensure navbar is above other elements */
+}
+
+.navbar-logo {
+    max-height: 80px;
+    width: auto;
+    padding-top: 5px;
+}
+
+.nav-link {
+    color: black;
+    font-weight: 500;
+    position: relative;
+    transition: color 0.3s;
+}
+
+.navbar-toggler:hover,
+.btn-close:hover {
+    color: black;
+}
+
+@media (min-width: 991px) {
+    .nav-link::before {
+        content: "";
+        position: absolute;
+        bottom: -2px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 2px;
+        background: black;
+        visibility: hidden;
+        transition: 0.3s ease-in-out, visibility 0.3s ease;
+    }
+    .nav-link:hover::before {
+        width: 100%;
+        visibility: visible;
+    }
+}
+
+.offcanvas-header,
+.offcanvas-body {
+    color: black; /* Adjust text color for sidebar */
+}
+.landing-section {
+    background-image: url('natalie-chaney-zhUzdTgtRP8-unsplash.jpg');
+    background-size: cover;
+    background-position: center center;
+    min-height: 100vh;
+    padding-top: 80px; 
+    position: relative;
+    z-index: 0;
+}
+.card {
+    border: none;
+    transition: transform 0.2s ease-in-out;
+    background-color: grey;
+    color: white;
+    text-align: center;
+}
+.card:hover {
+    transform: scale(1.05);
+}
+.card-img-top {
+    height: 300px;
+    object-fit: cover;
+}
+.text-center{
+    padding-top: 40px;
+    font-size: 50px;
+    color: white;
+}
+
+.footer {
+    background-color: grey;
+    padding: 20px 0; /* Adjust padding to make the footer smaller */
+    position: fixed; /* Change to fixed position */
+    bottom: 0;
+    width: 10%;
+    
+}
+
+.footer .footer-logo {
+    max-width: 80px; /* Reduce the max-width of the logo */
+}
+
+.footer .web-designer-name,
+.footer .email-address {
+    margin-top: 10px; /* Reduce the margin top */
+    font-size: 1px; /* Decrease font size */
+    color: #6c757d;
+}
+body {
+    padding-bottom: 200px; /* Adjust as needed based on footer height */
+    position: relative;
+    min-height: 100px;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+.text-muted{
+    font-size: 30px;
+}
